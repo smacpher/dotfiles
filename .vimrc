@@ -21,10 +21,18 @@ set exrc
 set secure
 set number
 set expandtab
-set tabstop=4
-set softtabstop=4
+autocmd FileType c setlocal tabstop=2
+autocmd FileType c setlocal softtabstop=2
+autocmd FileType c setlocal shiftwidth=2
+autocmd FileType cpp setlocal tabstop=2
+autocmd FileType cpp setlocal softtabstop=2
+autocmd FileType cpp setlocal shiftwidth=2
+autocmd FileType make setlocal noexpandtab tabstop=4 softtabstop=4 shiftwidth=4 
+autocmd FileType python setlocal tabstop=4
+autocmd FileType python setlocal softtabstop=4
+autocmd FileType python setlocal shiftwidth=4
+autocmd FileType sh setlocal tabstop=2 softtabstop=2 shiftwidth=2
 set autoindent
-set shiftwidth=4
 set hlsearch
 set colorcolumn=80
 set backspace=indent,eol,start
@@ -43,3 +51,7 @@ set laststatus=2 " this is needed to make statusline always visible
 
 set path+=**
 set wildmenu
+
+" allow clicking to move cursor
+set mouse=a
+
